@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -7,6 +11,10 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:"100vh",
 }
 article,
 aside,
@@ -619,4 +627,34 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+/*password project*/
+.box {
+  position: relative;
+  width: auto;
+}
+.box input {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  border: none;
+  margin: 45vh 0 20px;
+  outline: none;
+  padding: 0 20px;
+  font-size: 24px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: black;
+  box-shadow: -4px -4px 10px rgba(255,255,255,1),
+  inset 4px 4px 10px rgba(0,0,0,0.05),
+  inset -4px -4px 10px rgba(255,255,255,1),
+  4px 4px 10px rgba(0,0,0,0.05);
+}
+.box input::placeholder {
+  text-align: center;
+}
+input {
+  text-align: center;
+  margin-top: 300px;
 }
