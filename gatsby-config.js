@@ -18,11 +18,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Password Generator`,
+        short_name: `Pass Gen`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#13C5DE`,
+        theme_color: `#13C5DE`,
         display: `standalone`,
         icon: `src/images/password.png`,
       },
