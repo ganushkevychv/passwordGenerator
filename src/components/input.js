@@ -59,11 +59,9 @@ let styleBtn = {
     <h2>Passwords Generator</h2>
     <Input type="text" id="password" readOnly="" placeholder="password" />
     <div style={boxBtn}> 
-  
       <Button style={styleBtn}  onClick={getPassword} >10</Button>
       <Button style={styleBtn} onClick={getPasswordOne} >12</Button>
       <Button style={styleBtn} onClick={getPasswordTwo} >16</Button>
-
       </div>
     </div>
   )
