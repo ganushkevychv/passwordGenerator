@@ -5,6 +5,17 @@ import {
 } from "reactstrap"
 
 const Todo = (props) => {
+    const form = document.querySelector("form");
+    const ul = document.querySelector("ul");
+    const btn = document.querySelector("Button");
+    const input = document.querySelector("#todoInput");
+
+const liCreator = (text) => {
+const li = document.createElement("li")
+li.textContent = text
+ul.appendChild(li)
+}
+
     let boxBtn = {
         display:"flex",
         justifyContent:"space-around",
@@ -20,7 +31,7 @@ const Todo = (props) => {
     return (
         <div className="boxTodo" >
         <form>
-        <Input type="text" id="password" readOnly="" placeholder="save your passsword here" />
+        <Input type="text" id="todoInput" readOnly="" placeholder="save your passsword here" />
         </form>
         <h2>Saved passwords</h2>
         <ul></ul>
