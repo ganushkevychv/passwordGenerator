@@ -3,7 +3,7 @@ import {
   Button,
   Input
 } from "reactstrap"
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const InputComponent = (props) => {
 
@@ -46,6 +46,8 @@ justifyContent:"space-around",
 alignItems:"center",
 }
 let styleBtn = {
+  width:"50px",
+  heigh:"20px",
     color: "black",
     backgroundColor: "white",
     borderRadius:"8px",
