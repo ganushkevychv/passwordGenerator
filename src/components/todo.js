@@ -16,6 +16,13 @@ li.textContent = text
 ul.appendChild(li)
 }
 
+form.addEventListener('submit', function (e) {
+    e.preventDefault()
+  
+    liMaker(input.value)
+    input.value = ''
+  })
+
     let boxBtn = {
         display:"flex",
         justifyContent:"space-around",
