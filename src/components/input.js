@@ -1,13 +1,15 @@
-import React from "react"
+import React, { useState } from "react"
 import {
   Button,
   Input
 } from "reactstrap"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const InputComponent = (props) => {
+
 const getPassword = () => {
     let symbols = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0123456789";
-    let passwordLength = 8;
+    let passwordLength = 10;
     let password = "";
     
     for (let i=0; i<passwordLength; i++){
@@ -16,23 +18,49 @@ const getPassword = () => {
 }
 document.querySelector("#password").value = password;
 } 
+const getPasswordOne = () => {
+  let symbols = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0123456789";
+  let passwordLength = 12;
+  let password = "";
+  
+  for (let i=0; i<passwordLength; i++){
+      let randomSymbol = Math.floor(Math.random() * symbols.length);
+      password += symbols.substring(randomSymbol,randomSymbol + 1);
+}
+document.querySelector("#password").value = password;
+} 
+const getPasswordTwo = () => {
+  let symbols = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0123456789";
+  let passwordLength = 16;
+  let password = "";
+  
+  for (let i=0; i<passwordLength; i++){
+      let randomSymbol = Math.floor(Math.random() * symbols.length);
+      password += symbols.substring(randomSymbol,randomSymbol + 1);
+}
+document.querySelector("#password").value = password;
+} 
 let boxBtn = {
 display:"flex",
-justifyContent:"center",
+justifyContent:"space-around",
 alignItems:"center",
 }
 let styleBtn = {
     color: "black",
     backgroundColor: "white",
-    // borderColor: "#17a2b8",
     borderRadius:"8px",
     border:"2px solid #008CBA",
+    justifyContent:"space-around",
 }
   return (
     <div className="box" >
     <Input type="text" id="password" readOnly="" placeholder="password" />
     <div style={boxBtn}> 
-      <Button style={styleBtn}  onClick={getPassword} >Generate</Button>
+  
+      <Button style={styleBtn}  onClick={getPassword} >10</Button>
+      <Button style={styleBtn} onClick={getPasswordOne} >12</Button>
+      <Button style={styleBtn} onClick={getPasswordTwo} >16</Button>
+
       </div>
     </div>
   )
